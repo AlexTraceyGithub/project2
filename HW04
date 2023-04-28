@@ -1,0 +1,4 @@
+let hours = +prompt('Write the number of hours');
+let seconds = hours * 3600;
+
+alert(seconds);
