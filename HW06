@@ -1,0 +1,54 @@
+
+let dateOfBirsday = +prompt('Write your date Of Birsday');
+let city = prompt('Write your city');
+let favoriteSport = prompt('Write your favorite type of sport');
+
+let year, trimCity, userCity, today;
+
+if (dateOfBirsday>=1900 && dateOfBirsday<=2023) {
+    today = new Date(); 
+    year = today.getFullYear() - dateOfBirsday;
+    year = `Тобі ${year} років`;
+} else {
+    year = 'Шкода, що Ви не захотіли ввести свій вік';
+}
+
+if (city == undefined || city.trim() == '') {
+    userCity = 'Шкода, що Ви не захотіли ввести своє місто';
+} else {
+
+trimCity = city.trim();
+userCity = trimCity[0].toUpperCase() + trimCity.toLowerCase().slice(1);
+
+if (userCity === 'Київ') {
+    userCity = 'Ви живете у столиці України';
+} else if (userCity === 'Лондон') {
+    userCity = 'Ви живете у столиці Великої Британії';
+}  else if (userCity === "Вашингтон") {
+    userCity = 'Ви живете у столиці США';
+}   else if (userCity === "Москва") {
+    userCity = 'Геть з України, москаль некрасівий!';
+}   else {
+    userCity = `Ваше місто ${userCity}`;
+}
+}
+
+if (favoriteSport == undefined || favoriteSport.trim() == '') {
+    favoriteSport = 'Шкода, що Ви не захотіли ввести свій улюблений вид спорту';
+} else {
+    if (favoriteSport == 'футбол') {
+        favoriteSport = 'Круто! Хочеш стати Пеле?';
+    } else if (favoriteSport == 'шахи') {
+        favoriteSport = 'Круто! Хочеш стати Боббі Фішер?';
+    } else if (favoriteSport == 'dota 2') {
+        favoriteSport = 'Круто! Хочеш стати Dendi?';
+    } else {
+        favoriteSport = `Твій улюблений спорт це ${favoriteSport}`;
+    }
+}
+
+alert (`
+${year} 
+${userCity} 
+${favoriteSport}
+`);
