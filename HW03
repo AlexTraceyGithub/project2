@@ -1,0 +1,9 @@
+let numberOne = +prompt('Write first number ...');
+let numberTwo = +prompt('Write second number ...');
+
+alert(`
+${numberOne}+${numberTwo} = ${numberOne+numberTwo}
+${numberOne}-${numberTwo} = ${numberOne-numberTwo}
+${numberOne}*${numberTwo} = ${numberOne*numberTwo}
+${numberOne}/${numberTwo} = ${numberOne/numberTwo}
+`);
