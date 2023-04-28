@@ -1,0 +1,21 @@
+let firstNumber = +prompt('Write first number');
+let averageNumber;
+
+if (firstNumber) {
+    let secondNumber = +prompt('Write second number');
+    if(secondNumber) {
+        let thirdNumber = +prompt('Write third number');
+        if(thirdNumber) {
+        averageNumber = (firstNumber + secondNumber + thirdNumber) / 3;
+        alert(averageNumber);
+        }
+        else {
+        alert("thirdNumber - Not a number!");
+    }
+    }
+    else {
+        alert("secondNumber - Not a number!");
+    }
+} else {
+    alert("firstNumber - Not a number!");
+}
